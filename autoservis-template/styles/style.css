@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 .page__header{
-    background-image: url(/images/Autoservis_Plisek--Pozadi-Header.png);
+    background-image: url(/autoservis-template/images/Autoservis_Plisek--Pozadi-Header.png);
     width: 100%;
     background-repeat: no-repeat;
   background-attachment: fixed; 
@@ -113,7 +113,13 @@ h1, h2, h3, h4, h5, h6{
         width: 692px;
     }
 }
-    
+@media (max-width:766px){
+    .page__header{
+        background-position: left;
+        background-size: auto;
+        background-attachment:fixed;
+    }
+}
 .page__intro--location{
     font-size: 20px;
     margin-bottom: 10px;
