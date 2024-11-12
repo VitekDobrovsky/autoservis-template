@@ -14,11 +14,11 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 .page__header{
-    background-image: url(/autoservis-template/images/Autoservis_Plisek--Pozadi-Header.png);
+    background-image: url(/images/Autoservis_Plisek--Pozadi-Header.png);
     width: 100%;
     background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
+  background-attachment:scroll; 
+  background-size: 100% 906px;
 }
 .page__nav{
     font-family: "DM Sans", sans-serif;
@@ -113,13 +113,7 @@ h1, h2, h3, h4, h5, h6{
         width: 692px;
     }
 }
-@media (max-width:766px){
-    .page__header{
-        background-position: left;
-        background-size: auto;
-        background-attachment:fixed;
-    }
-}
+    
 .page__intro--location{
     font-size: 20px;
     margin-bottom: 10px;
@@ -144,6 +138,63 @@ h1, h2, h3, h4, h5, h6{
 .page__intro--button:hover{
     margin-top: 40px;
     transition: .2s;
+}
+.page__intro-img{
+    margin-top: 190px;
+}
+.page__intro-text{
+    color: #12232F;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-top: 55px;
+}
+.page__section{
+    height: 553px;
+    max-width: 1170px;
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+.page__section--h2{
+    color: #12232F;
+    font-size: 3em;
+    margin: 15px 0;
+    font-weight: 700;
+}
+.page__section--h2--highlight{
+    color: #FE8C01;
+    text-decoration: underline;
+}
+.info{
+    --indent: 1em;
+    width: calc((1170px - 4em)/2);
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+.info1{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page__section--p{
+    color: rgba(0,0,0,0.7);
+    height: 189px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+}
+.page__section--img--car{
+    margin-top: 20px;
+}
+.page__section--img-mechanic{
+    border-radius: 5px;
+}
+.button1{
+    width: 233px;
+    font-size: 1em;
+    font-weight: 700;
 }
 .page__footer{
     font-family: "Ubuntu", sans-serif;
