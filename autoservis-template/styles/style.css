@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+html{
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat", sans-serif;
+}
+.img-respomsive{
+    display: block;
+    width: 100%;
+}
+.page__header{
+    background-image: url(/images/Autoservis_Plisek--Pozadi-Header.png);
+    width: 100%;
+    background-repeat: no-repeat;
+  background-attachment:scroll; 
+  background-position: bottom center;
+  background-size: cover;/* 100% 906px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.page__nav{
+    font-family: "DM Sans", sans-serif;
+    background-color: white;
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page__nav--button{
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.button{
+    font-family: "DM Sans", sans-serif;
+    background-color: #FE8C01;
+    color: white;
+    border-radius: 11px;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.button--shake:hover{
+    animation: kivaní 0.6s ease-in-out 1;
+}
+@keyframes kivaní {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }   /* Menší kývání */
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }  /* Menší kývání */
+    100% { transform: rotate(0deg); }
+}
+.page__nav__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+.line{
+    height: 4px;
+    width: 30px;
+    background-color:#FE8C01;
+    border-radius: 2px;
+}
+.page__nav--menu-icon{
+    display: none;
+    gap: .7em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.page__nav__list--logo{
+    display: flex;
+    align-items: center;
+}
+.page__nav__list--logo--h1{
+    font-weight: 700;
+}
+.page__nav__list--logo img{
+    margin-right: 2em;
+}
+.page__nav__list-menu{
+    /* width: 309px; */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* flex-grow: 1; */
+    justify-content: flex-end;
+    gap: 1.5em;
+    /* font-size: 1em; */
+}
+.page__nav__list-menu li{
+    cursor: pointer;
+}
+.page__nav__list-menu li:hover{
+    color: #188bf6;
+    transition: all .3s;
+}
+.page__nav--button{
+    font-size: 1em;
+    padding: 0 2em;
+    margin-right: 0;
+}
+.page__nav__list-hamburger {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Skryté mimo obrazovku */
+    width: 100%; /* Zaujme celou šířku obrazovky */
+    height: 100%; /* Zaujme celou výšku obrazovky */
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .page__nav--menu-icon.close-icon {
+    top: 10px;       /* Posun od horního okraje */
+    right:20px;     /* Posun od pravého okraje */
+    z-index: 1001;   /* Zajišťuje, že bude nad obsahem */
+    padding: 0.5em;  /* Volitelně: přidání prostoru kolem ikony */
+    cursor: pointer;
+}
+.close-icon{
+    gap: .25em;
+}
+.line{
+    width: 1.5em;
+}
+.page__nav--menu-icon.close-icon.active{
+    position: fixed;
+}
+.page__nav__list-hamburger ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+.page__nav__list-hamburger ul li {
+    margin: 1em 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+    color: #12232F;
+  }
+  .page__nav__list-hamburger ul li:hover {
+    color: #FE8C01;
+    transition: color 0.3s ease;
+  } 
+.page__intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.page__intro--h2-1, .page__intro--h2-2{
+    font-size: 50px;
+    margin-top: 60px;
+    font-weight: 700;
+    width: 80%;
+    text-align: center;
+}
+.page__intro--h2-2{
+    display: none;
+}
+.page__intro-img{
+    margin-top: 30%;
+} 
+.page__intro--location{
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 70%;
+    text-align: center;
+}
+.page__intro--phone{
+    font-size: 29px;
+}
+.page__intro--highlight{
+    font-weight: 700;
+    color: #FE8C01;
+}
+.page__intro--button{
+    border: 4px solid white;
+    width: 176px;
+    height: 56px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-right: 0;
+}
+.page__intro--button:hover{
+    transform: translateY(5px);
+  box-shadow: none;
+    transition: .2s;
+}
+
+.page__intro-text{
+    color: #12232F;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 55px;
+}
+.page__section{
+    /* height: 553px; */
+    max-width: 1170px;
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0;
+}
+.page__section--h2{
+    color: #12232F;
+    font-size: 3em;
+    margin: 15px 0;
+    font-weight: 700;
+}
+.page__section--h2--highlight{
+    color: #FE8C01;
+    text-decoration: underline;
+}
+.info{
+    --indent: 1em;
+    width: calc((1170px - 4em)/2);
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+.info1{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page__section--p-1{
+    color: rgba(0,0,0,0.7);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+}
+.page__section--p-2{
+    color: rgba(0,0,0,0.7);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+    display: none;
+}
+.page__section--img--car-1{
+    margin-top: 20px;
+    order: 0;
+}
+.page__section--img-mechanic{
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.button1{
+    width: 233px;
+    font-size: 1em;
+    font-weight: 700;
+}
+.page__section--cards{
+    background-color: #D8D7C7;
+    height: auto;
+}
+.page__section--h2--cards{
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+}
+.card__box{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2em;
+}
+.card{
+    max-width: 360px;
+    padding: .5em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card__section__title{
+    color: #12232F;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: .5em .25em;
+}
+.card__section__text{
+    margin: 0 .25em;
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+}
+.card__flex{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button__card{
+    width: 10em;
+    font-size: 1em;
+    font-weight: 700;
+    margin-right: 0;
+    margin: 1.8em 0 3em 0;
+
+}
+.review__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 3em;
+}
+.review__card{
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    color: black;
+    max-width: 480px;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: .5em;
+    gap: 1em;
+}
+.review__footer{
+    display: flex;
+    gap: 1.5em;
+}
+.user__info{
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+}
+.user__info p{
+    margin: 0;
+}
+.page__footer{
+    font-family: "Ubuntu", sans-serif;
+    background-color: #D8D7C7;
+    width: 100%;
+    height: 400px;
+    bottom: 0;
+}
+.page__footer--title{
+    font-size: 50px;
+    padding: 2em 3em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.footer__box{
+    background-image: url(/images/Autoservis_Plíšek-footerBox.webp);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    margin-top: -3em;
+}
+@media (max-width:1169px){
+    .page__section--p-1{
+        order: 3;
+    }
+    .button1{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 771px){
+    .card{
+        max-width: none;
+        flex-grow: 1;
+    }
+}
+@media (width<=830px){
+    .page__nav{
+        max-width: 768px;
+    }
+    .page__nav__list-menu{
+        font-size: .8em;
+    }
+    .page__nav__list--logo--img{
+        width: 80px;
+    }
+    .page__nav__list--logo--h1{
+        font-size: 1.1em;
+    }
+    .page__nav--button{
+
+    }
+    .page__intro{
+        max-width: 768px;
+    }
+    .page__intro--h2-1{
+        font-size: 2.5em;
+    }
+    .page__intro-img{
+        width: 600px;
+        height: auto;
+        margin-top: 40px;
+    }
+    .page__intro-text{
+        margin: 1em auto;
+    }
+}
+@media (width<= 768px){
+    .page__nav{
+        max-width: 640px;
+    }
+    .page__nav__list--logo--h1{
+        font-size: .8em;
+    }
+    .page__intro{
+        max-width: 640px;
+    }
+    .page__intro--h2-1{
+        font-size: 2em;
+    }
+    .page__intro--location{
+        font-size: 1.2em;
+    }
+    .page__intro--button{
+        margin-top: 10px;
+    }
+    .page__intro-img{
+        width: 500px;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+.page__nav__list-hamburger.active {
+    right: 0; /* Vyjede na obrazovku */
+  }
+@media (max-width: 640px) {
+    .page__nav__list-menu {
+      display: none;
+    }
+  
+    .page__nav--menu-icon {
+      display: flex;
+    }
+    .page__intro--phone{
+        font-size: 1.5em;
+    }
+    .page__nav--menu-icon.close-icon{
+        /* position: fixed; */
+    }
+    .page__intro-img{
+        width: 400px;
+        height: auto;
+        margin-top: 20px;
+    }
+    .page__intro-text{
+        font-size: 1.2em;
+        margin: 1em auto;
+    }
+    .info{
+        width: 100%;
+        justify-content: center;
+    }
+    .page__section--img--car-1{
+        width: 100%;
+        height: auto;
+    }
+    .page__section--img-mechanic{
+        width: 100%;
+        height: auto;
+    }
+    .page__section--h2{
+        font-size: 2em;
+    }
+    .page__section--p-1{
+        display: none;
+    }
+    .page__section--p-2{
+        display: block;
+        order: 3;
+    }
+    .page__section{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .img-respomsive{
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    .card__section__title{
+        font-size: 1.2em;
+    }
+    .card__section__text{
+        font-size: .9em;
+    }
+    .card{
+        text-align: center;
+    }
+    .button1{
+        font-size: .8em;
+        width: auto;
+        padding: .2em 1em;
+    }
+    .button__card{
+        margin: 20px auto;
+    }
+    .review__card{
+        max-width: none;
+    }
+    .page__intro--h2-2{
+        display: block;
+        font-size: 2.5em;
+    }
+    .page__intro--h2-1{
+        display: none;
+    }
+  }
+  @media(max-width:475px){
+    .page__intro--h2-2{
+        font-size: 1.5em;
+    }
+    .page__intro--location{
+        font-size: 1em;
+    }
+    .page__intro--phone{
+        font-size: 1.2em;
+    }
+    .page__intro--button{
+        font-size: .8em;
+    }
+    .page__intro-img{
+        width: 300px;
+        height: auto;
+        margin-top: 10px;
+    }
+    .page__intro-text{
+        font-size: 1em;
+    }
+    .page__section--h2{
+        font-size: 1.5em;
+    }
+    .page__section--p-1{
+        display: none;
+    }
+    .page__section--p-2{
+        display: block;
+        order: 3;
+    }
+    .page__section--img--car-1{
+        width: 100%;
+        height: auto;
+    }
+    .page__section--img-mechanic{
+        width: 100%;
+        height: auto;
+    }
+    .card__section__title{
+        font-size: 1em;
+    }
+    .card__section__text{
+        font-size: .8em;
+    }
+    .card{
+        max-width: none;
+    }
+  }
