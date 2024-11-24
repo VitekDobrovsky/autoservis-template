@@ -864,7 +864,7 @@
             text-align: center;
         }
         .review__card{
-            max-width: none;
+            max-width: 75%;
         }
         .page__intro--h2-2{
             display: block;
@@ -892,6 +892,7 @@
         }
         .review__section2{
             margin-top: -100px;
+
         }
         .about__main__img{
             margin-bottom: 2em;
