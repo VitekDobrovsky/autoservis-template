@@ -5,7 +5,6 @@ function toggleMenu() {
     hamburgerMenu.style.right = hamburgerMenu.style.right === '0px' ? '-100%' : '0';
     const fixedIcon = document.querySelector('.page__nav--menu-icon.close-icon');
     fixedIcon.classList.toggle('active');
-
 }
 
 const headerLinks = document.querySelectorAll('header a');
@@ -14,3 +13,6 @@ headerLinks.forEach(link => {
         link.style.color = '#FE8C01';
     }
 });
+
+//!Animation
+
