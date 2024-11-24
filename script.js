@@ -10,7 +10,7 @@ function toggleMenu() {
 
 const headerLinks = document.querySelectorAll('header a');
 headerLinks.forEach(link => {
-    if (link.classList.contains('active')) {
-        link.style.color = '#84cc16'; // Lime-500 barva
+    if (link.classList.contains('activeLi')) {
+        link.style.color = '#FE8C01';
     }
 });
