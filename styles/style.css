@@ -21,13 +21,42 @@
 }
 
 @layer design {
+    /*Presets*/
+
+    .figure--fix {
+        margin: 0;
+    }
+
     h1, h2, h3, h4, h5, h6{
         font-family: "Montserrat", sans-serif;
     }
+
     .img-respomsive{
         display: block;
         width: 100%;
     }
+
+    .button1 {
+        background-color: var(--orange, #FE8C01); 
+        color: var(--white, white); 
+        border: 2px solid transparent; 
+        padding: 10px 20px; 
+        text-decoration: none; 
+        display: inline-block; 
+        border-radius: 5px; 
+        transition: all 0.3s ease; 
+    }
+    
+    .button1:hover {
+        background-color: var(--white, white); 
+        color: #FE8C01; 
+        border: 2px solid var(--orange, #FE8C01);  
+    }
+
+    /*Hamburger*/
+
+    /*Header*/
+
     .page__header{
         background-image: url(../images/back/Autoservis_Plisek--Pozadi-Header.webp), url(../images/basic/Autoservis_Plisek--Pozadi-Header.png), url(../images/back/Autoservis_Plisek--Pozadi-Header.avif);
         width: 100%;
@@ -39,15 +68,16 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        color: var(--white, white);
     }
     .page__nav{
         font-family: "DM Sans", sans-serif;
-        background-color: var(--white, white);
         max-width: 1170px;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: .1em solid;
     }
     .page__nav--button{
         font-size: 2em;
@@ -63,9 +93,15 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        transition: .5s all;
     }
     .button--shake:hover{
-        animation: kivaní 0.6s ease-in-out 1;
+        background-color: var(--white, white);
+        color: var(--orange, #FE8C01);
+    }
+    .button--shake:hover strong,
+    .button--shake:hover p {
+        color: var(--orange, #FE8C01);
     }
     @keyframes kivaní {
         0% { transform: rotate(0deg); }
@@ -84,6 +120,9 @@
         padding-top: .3em;
         padding-bottom: .3em;
     }
+
+    /*Hamburger*/
+    
     .line{
         height: 4px;
         width: 30px;
@@ -120,12 +159,12 @@
     }
     .page__nav__list-menu li a{
         cursor: pointer;
-        color: var(--black, black);
+        color: var(--white, white);
         text-decoration: none;
+        transition: all .3s;
     }
     .page__nav__list-menu li a:hover{
-        color: #188bf6;
-        transition: all .3s;
+        color: var(--orange, #FE8C01);
     }
     #nav-button{
         color: var(--white, white);
@@ -145,7 +184,7 @@
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:space-evenly;
         align-items: center;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
@@ -174,6 +213,10 @@
         padding: 0;
         margin: 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 33%;
     }
     .page__nav__list-hamburger ul li a{
         margin: 1em 0;
@@ -234,7 +277,7 @@
     }
     .page__intro--button:hover{
         transform: translateY(5px);
-      box-shadow: none;
+        box-shadow: none;
         transition: .2s;
     }
     
@@ -245,9 +288,16 @@
         font-size: 1.5em;
         margin-top: 55px;
     }
+
+    /*Main*/
+
+    .page__content {
+        
+    }
+
     .page__section{
         /* height: 553px; */
-        max-width: 1170px;
+        max-width: 1300px;
         margin: 50px auto 100px auto;
         width: 100%;
         display: flex;
@@ -298,9 +348,15 @@
         margin-top: 20px;
     }
     .button1{
-        width: 233px;
+        border: 2px solid;
         font-size: 1em;
         font-weight: 700;
+        height: 35px;
+    }
+    .button1:hover {
+        color: var(--orange, orange);
+        background-color: var(--white, white);
+        
     }
     .page__section--cards{
         background-color: #D8D7C7;
@@ -312,12 +368,11 @@
         margin: 0;
     }
     .card__box{
-        max-width: 1170px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.2em;
+        gap: 2.5em;
     }
     .card{
         max-width: 360px;
@@ -342,7 +397,7 @@
         margin-bottom: 1em;
     }
     .card__flex{
-        max-width: 1170px;
+        max-width: 1600px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -374,6 +429,8 @@
         padding: 1.5em;
         border-radius: .5em;
         gap: 1em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
     .review__footer{
         display: flex;
@@ -594,8 +651,9 @@
     }
     @media (max-width: 771px){
         .card{
-            max-width: none;
-            flex-grow: 1;
+            max-width: 570px;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
         }
     }
     @media (width<=830px){
@@ -722,11 +780,6 @@
         }
         .card{
             text-align: center;
-        }
-        .button1{
-            font-size: .8em;
-            width: auto;
-            padding: .2em 1em;
         }
         .button__card{
             margin: 20px auto;

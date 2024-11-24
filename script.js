@@ -7,3 +7,10 @@ function toggleMenu() {
     fixedIcon.classList.toggle('active');
 
 }
+
+const headerLinks = document.querySelectorAll('header a');
+headerLinks.forEach(link => {
+    if (link.classList.contains('active')) {
+        link.style.color = '#84cc16'; // Lime-500 barva
+    }
+});
