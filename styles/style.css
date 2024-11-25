@@ -177,16 +177,16 @@
         margin-right: 0;
         position: relative; /* Nutné pro animaci */
         transform: translateX(100%); /* Začíná mimo obrazovku vpravo */
-        animation: button-slide-in 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards; /* Delší animace pro jemnější efekt */
+        animation: button-slide-in 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards; /* Delší animace pro jemnější efekt */
     }
     
     /* Klíčové snímky animace */
     @keyframes button-slide-in {
         0% {
-            transform: translateX(300%); /* Začíná mimo obrazovku vpravo */
+            transform: translateX(150%); /* Začíná mimo obrazovku vpravo */
         }
         75% {
-            transform: translateX(-5%); /* Mírný přesah přes cílovou pozici */
+            transform: translateX(0%); /* Mírný přesah přes cílovou pozici */
         }
         85% {
             transform: translateX(5%); /* Návrat blíže cíli */
@@ -341,7 +341,7 @@
         font-weight: 700;
         margin-right: 0;
         position: relative; /* Nutné pro animaci */
-        animation: button-slide-up 0.6s ease-out forwards; /* Animace na začátku */
+        animation: button-slide-up 1.2s ease-out forwards; /* Animace na začátku */
     }
     .page__intro--button:hover {
         background-color: var(--white, white);
