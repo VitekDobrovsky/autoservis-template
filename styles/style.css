@@ -217,7 +217,7 @@
             z-index: 1000;
         }
 
-        .page__nav__list-hamburger ul {
+        .page__nav__list-hamburger menu {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -228,7 +228,7 @@
             height: 33%;
         }
 
-        .page__nav__list-hamburger ul li a {
+        .page__nav__list-hamburger menu li a {
             margin: 1em 0;
             font-family: "DM Sans", sans-serif;
             font-size: 1.5em;
@@ -239,7 +239,7 @@
             color: var(--dark-blue, #12232F);
         }
 
-        .page__nav__list-hamburger ul li a:hover {
+        .page__nav__list-hamburger menu li a:hover {
             color: var(--orange, #FE8C01);
             transition: color 0.3s ease;
         }
@@ -315,7 +315,7 @@
     .page__intro-img{
         opacity: 0;
         margin-top: 10em;
-        animation: showup 2s forwards; /* Použití 'forwards' pro zachování stavu po animaci */
+        animation: showup 1.5s forwards; /* Použití 'forwards' pro zachování stavu po animaci */
     } 
     .page__intro--location{
         font-size: 20px;
