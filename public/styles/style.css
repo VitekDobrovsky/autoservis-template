@@ -1,3 +1,5 @@
+@layer reset, init, design;
+
 @import url(normalize.css) layer(reset);
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap")
 layer(init);
@@ -8,977 +10,981 @@ layer(init);
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap")
 layer(init);
 
-:root {
-  --orange: #fe8c01;
-  --dark-blue: #12232f;
-  --white: white;
-  --black: black;
-  --gray: #d8d7c7;
-  --shadow: rgba(149, 157, 165, 0.2);
-}
-html {
-  font-family: "Poppins", sans-serif;
-}
-
-/*Presets*/
-
-.figure--fix {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-.img-respomsive {
-  display: block;
-  width: 100%;
-}
-
-.button1 {
-  background-color: var(--orange, #fe8c01);
-  color: var(--white, white);
-  border: 2px solid transparent;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.button1:hover {
-  background-color: var(--white, white);
-  color: #fe8c01;
-  border: 2px solid var(--orange, #fe8c01);
-}
-
-/*Hamburger*/
-
-/*Header*/
-
-.page__header {
-  background-image: url(../images/back/Autoservis_Plisek--Pozadi-Header.webp),
-    url(../images/basic/Autoservis_Plisek--Pozadi-Header.png),
-    url(../images/back/Autoservis_Plisek--Pozadi-Header.avif);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: bottom center;
-  background-size: cover; /* 100% 906px; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  color: var(--white, white);
-}
-.page__nav {
-  font-family: "DM Sans", sans-serif;
-  max-width: 1170px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 0.1em solid;
-}
-.page__nav--button {
-  font-size: 2em;
-  margin-right: 20px;
-}
-.button {
-  font-family: "DM Sans", sans-serif;
-  background-color: var(--orange, #fe8c01);
-  color: var(--white, white);
-  border-radius: 11px;
-  display: flex;
-  height: 56px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  transition: 0.5s all;
-}
-.button--shake:hover {
-  background-color: var(--white, white);
-  color: var(--orange, #fe8c01);
-}
-.button--shake:hover strong,
-.button--shake:hover p {
-  color: var(--orange, #fe8c01);
-}
-.page__nav__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-}
-
-@keyframes showup {
-  0% {
-    opacity: 0;
+@layer init {
+  :root {
+    --orange: #fe8c01;
+    --dark-blue: #12232f;
+    --white: white;
+    --black: black;
+    --gray: #d8d7c7;
+    --shadow: rgba(149, 157, 165, 0.2);
   }
-  100% {
-    opacity: 1;
+  html {
+    font-family: "Poppins", sans-serif;
   }
 }
 
-/*Hamburger*/
+@layer design {
+  /*Presets*/
 
-.line {
-  height: 4px;
-  width: 30px;
-  background-color: var(--orange, #fe8c01);
-  border-radius: 2px;
-}
-.page__nav--menu-icon {
-  display: none;
-  gap: 0.7em;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-.page__nav__list--logo {
-  display: flex;
-  align-items: center;
-}
-.page__nav__list--logo--h1 {
-  font-weight: 700;
-}
-.page__nav__list--logo img {
-  margin-right: 2em;
-}
-.page__nav__list-menu {
-  /* width: 309px; */
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  /* flex-grow: 1; */
-  justify-content: flex-end;
-  gap: 1.5em;
-  /* font-size: 1em; */
-}
-.page__nav__list-menu li a {
-  cursor: pointer;
-  color: var(--white, white);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-.page__nav__list-menu li a:hover {
-  color: var(--orange, #fe8c01);
-}
-#nav-button {
-  color: var(--white, white);
-}
-.page__nav--button {
-  font-size: 1em;
-  padding: 0 2em;
-  margin-right: 0;
-  position: relative; /* Nutné pro animaci */
-  transform: translateX(100%); /* Začíná mimo obrazovku vpravo */
-  animation: button-slide-in 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045)
-    forwards; /* Delší animace pro jemnější efekt */
-}
-
-/* Klíčové snímky animace */
-@keyframes button-slide-in {
-  0% {
-    transform: translateX(150%); /* Začíná mimo obrazovku vpravo */
-  }
-  75% {
-    transform: translateX(0%); /* Mírný přesah přes cílovou pozici */
-  }
-  85% {
-    transform: translateX(5%); /* Návrat blíže cíli */
-  }
-  100% {
-    transform: translateX(0); /* Dokončení na cílovém místě */
-  }
-}
-/*Bohužel kvůli animaci*/
-.page {
-  overflow-x: hidden;
-}
-@media (max-width: 823px) {
-  /*Side-bar*/
-  .page__nav__list-hamburger {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Skryté mimo obrazovku */
-    width: 100%; /* Zaujme celou šířku obrazovky */
-    height: 100%; /* Zaujme celou výšku obrazovky */
-    background-color: var(--white, white);
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-  .page__nav__list-hamburger menu {
-    list-style: none;
-    padding: 0;
+  .figure--fix {
     margin: 0;
-    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .img-respomsive {
+    display: block;
+    width: 100%;
+  }
+
+  .button1 {
+    background-color: var(--orange, #fe8c01);
+    color: var(--white, white);
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .button1:hover {
+    background-color: var(--white, white);
+    color: #fe8c01;
+    border: 2px solid var(--orange, #fe8c01);
+  }
+
+  /*Hamburger*/
+
+  /*Header*/
+
+  .page__header {
+    background-image: url(../images/back/Autoservis_Plisek--Pozadi-Header.webp),
+      url(../images/basic/Autoservis_Plisek--Pozadi-Header.png),
+      url(../images/back/Autoservis_Plisek--Pozadi-Header.avif);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-size: cover; /* 100% 906px; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white, white);
+  }
+  .page__nav {
+    font-family: "DM Sans", sans-serif;
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1em solid;
+  }
+  .page__nav--button {
+    font-size: 2em;
+    margin-right: 20px;
+  }
+  .button {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--orange, #fe8c01);
+    color: var(--white, white);
+    border-radius: 11px;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s all;
+  }
+  .button--shake:hover {
+    background-color: var(--white, white);
+    color: var(--orange, #fe8c01);
+  }
+  .button--shake:hover strong,
+  .button--shake:hover p {
+    color: var(--orange, #fe8c01);
+  }
+  .page__nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+  }
+
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /*Hamburger*/
+
+  .line {
+    height: 4px;
+    width: 30px;
+    background-color: var(--orange, #fe8c01);
+    border-radius: 2px;
+  }
+  .page__nav--menu-icon {
+    display: none;
+    gap: 0.7em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  .page__nav__list--logo {
+    display: flex;
+    align-items: center;
+  }
+  .page__nav__list--logo--h1 {
+    font-weight: 700;
+  }
+  .page__nav__list--logo img {
+    margin-right: 2em;
+  }
+  .page__nav__list-menu {
+    /* width: 309px; */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* flex-grow: 1; */
+    justify-content: flex-end;
+    gap: 1.5em;
+    /* font-size: 1em; */
+  }
+  .page__nav__list-menu li a {
+    cursor: pointer;
+    color: var(--white, white);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .page__nav__list-menu li a:hover {
+    color: var(--orange, #fe8c01);
+  }
+  #nav-button {
+    color: var(--white, white);
+  }
+  .page__nav--button {
+    font-size: 1em;
+    padding: 0 2em;
+    margin-right: 0;
+    position: relative; /* Nutné pro animaci */
+    transform: translateX(100%); /* Začíná mimo obrazovku vpravo */
+    animation: button-slide-in 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045)
+      forwards; /* Delší animace pro jemnější efekt */
+  }
+
+  /* Klíčové snímky animace */
+  @keyframes button-slide-in {
+    0% {
+      transform: translateX(150%); /* Začíná mimo obrazovku vpravo */
+    }
+    75% {
+      transform: translateX(0%); /* Mírný přesah přes cílovou pozici */
+    }
+    85% {
+      transform: translateX(5%); /* Návrat blíže cíli */
+    }
+    100% {
+      transform: translateX(0); /* Dokončení na cílovém místě */
+    }
+  }
+  /*Bohužel kvůli animaci*/
+  .page {
+    overflow-x: hidden;
+  }
+  @media (max-width: 823px) {
+    /*Side-bar*/
+    .page__nav__list-hamburger {
+      position: fixed;
+      top: 0;
+      right: -100%; /* Skryté mimo obrazovku */
+      width: 100%; /* Zaujme celou šířku obrazovky */
+      height: 100%; /* Zaujme celou výšku obrazovky */
+      background-color: var(--white, white);
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .page__nav__list-hamburger menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 33%;
+    }
+
+    .page__nav__list-hamburger menu li a {
+      margin: 1em 0;
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.5em;
+      text-decoration: none;
+      gap: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--dark-blue, #12232f);
+    }
+
+    .page__nav__list-hamburger menu li a:hover {
+      color: var(--orange, #fe8c01);
+      transition: color 0.3s ease;
+    }
+    /*Hamburger-menu*/
+    .page__nav--menu-icon.close-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4em;
+      right: 1.5em;
+      z-index: 1001;
+      cursor: pointer;
+      width: 2em;
+      height: 2em;
+      background: none;
+    }
+
+    .line {
+      width: 100%;
+      height: 0.25em;
+      background-color: var(--orange, #fe8c01); /* Upravená barva */
+      border-radius: 0.125em;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Animace křížku */
+    .page__nav--menu-icon.close-icon.active .line:nth-child(1) {
+      transform: rotate(50deg) translateY(1em); /* Větší rotace a posun */
+    }
+
+    .page__nav--menu-icon.close-icon.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .page__nav--menu-icon.close-icon.active .line:nth-child(3) {
+      transform: rotate(-50deg) translateY(-1em); /* Větší rotace a posun */
+    }
+
+    /* Výchozí barva tlačítka hamburgeru */
+    #hamburger-button {
+      color: var(--white, white);
+    }
+
+    /* Aktivní stav pro pevnou pozici ikony */
+    .page__nav--menu-icon.close-icon.active {
+      position: fixed;
+    }
+  }
+  @media (min-width: 823px) {
+    .page__nav__list-hamburger {
+      display: none;
+    }
+  }
+  .page__intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 33%;
+    align-items: center;
+    gap: 1.5em;
+    color: var(--white, white);
+    margin-top: 3em;
   }
-
-  .page__nav__list-hamburger menu li a {
-    margin: 1em 0;
-    font-family: "DM Sans", sans-serif;
-    font-size: 1.5em;
-    text-decoration: none;
-    gap: 1em;
+  .page__intro--h2-1,
+  .page__intro--h2-2 {
+    font-size: 50px;
     font-weight: 700;
-    cursor: pointer;
-    color: var(--dark-blue, #12232f);
+    width: 80%;
+    text-align: center;
+    margin: 0;
+  }
+  .page__intro--h2-2 {
+    display: none;
+  }
+  .page__intro-img {
+    opacity: 0;
+    margin-top: 10em;
+    animation: showup 1.5s forwards; /* Použití 'forwards' pro zachování stavu po animaci */
+  }
+  .page__intro--location {
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    margin: 0;
+  }
+  .page__intro--phone {
+    font-size: 29px;
+    margin: 0;
+  }
+  .page__intro--highlight {
+    font-weight: 700;
+    color: var(--orange, #fe8c01);
   }
 
-  .page__nav__list-hamburger menu li a:hover {
-    color: var(--orange, #fe8c01);
-    transition: color 0.3s ease;
+  .page__intro--button {
+    border: 3px solid var(--white, white);
+    width: 176px;
+    height: 56px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 0;
+    position: relative; /* Nutné pro animaci */
+    animation: button-slide-up 1.2s ease-out forwards; /* Animace na začátku */
   }
-  /*Hamburger-menu*/
-  .page__nav--menu-icon.close-icon {
+  .page__intro--button:hover {
+    background-color: var(--white, white);
+    color: var(--orange, #fe8c01);
+    border: 3px solid var(--orange, #fe8c01);
+    transition: background-color 0.5s all;
+  }
+  /* Animace vyjetí nahoru a návrat */
+  @keyframes button-slide-up {
+    0% {
+      transform: translateY(70px); /* Začíná 20px nad svou cílovou pozicí */
+      opacity: 0; /* Začíná neviditelné */
+    }
+    70% {
+      transform: translateY(-20px); /* Mírný přesah */
+      opacity: 1; /* Tlačítko se stává viditelným */
+    }
+    100% {
+      transform: translateY(0); /* Konečná pozice */
+    }
+  }
+
+  .page__intro-text {
+    color: var(--dark-blue, #12232f);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+
+  /*Main*/
+
+  .page__section {
+    /* height: 553px; */
+    max-width: 1300px;
+    margin: 50px auto 100px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0;
+  }
+  .page__section--h2 {
+    color: #12232f;
+    font-size: 3em;
+    margin: 15px 0;
+    font-weight: 700;
+  }
+  .page__section--h2--highlight {
+    color: var(--orange, #fe8c01);
+    text-decoration: underline;
+  }
+  .info {
+    --indent: 1em;
+    width: calc((1170px - 4em) / 2);
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .info1 {
+    align-items: center;
+  }
+  .page__section--p-1 {
+    color: var(--black, black);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+  }
+  .page__section--p-2 {
+    color: var(--black, black);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+    display: none;
+  }
+  .page__section--img--car-1 {
+    margin-top: 20px;
+    order: 0;
+  }
+  .page__section--img-mechanic {
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .button1 {
+    border: 2px solid;
+    font-size: 1em;
+    font-weight: 700;
+    height: 35px;
+  }
+  .button1:hover {
+    color: var(--orange, orange);
+    background-color: var(--white, white);
+  }
+  .page__section--cards {
+    background-color: #d8d7c7;
+    height: auto;
+  }
+  .page__section--h2--cards {
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+  }
+  .card__box {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+  }
+  .card {
+    max-width: 360px;
+    padding: 0.5em;
+    background-color: var(--white, white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5em;
+    box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 8px 24px;
+  }
+  .card__section__title {
+    color: var(--dark-blue, #12232f);
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0.5em 0.25em;
+  }
+  .card__section__text {
+    margin: 0 0.25em;
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  .card__flex {
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.4em;
-    right: 1.5em;
-    z-index: 1001;
-    cursor: pointer;
-    width: 2em;
-    height: 2em;
-    background: none;
   }
-
-  .line {
-    width: 100%;
-    height: 0.25em;
-    background-color: var(--orange, #fe8c01); /* Upravená barva */
-    border-radius: 0.125em;
-    transition: all 0.3s ease-in-out;
+  .button__card {
+    width: 10em;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 1em;
   }
-
-  /* Animace křížku */
-  .page__nav--menu-icon.close-icon.active .line:nth-child(1) {
-    transform: rotate(50deg) translateY(1em); /* Větší rotace a posun */
+  .button--more {
+    margin: 0.8em;
+    text-align: center;
   }
-
-  .page__nav--menu-icon.close-icon.active .line:nth-child(2) {
-    opacity: 0;
+  .page__allreview {
+    margin-bottom: 9.5em;
   }
-
-  .page__nav--menu-icon.close-icon.active .line:nth-child(3) {
-    transform: rotate(-50deg) translateY(-1em); /* Větší rotace a posun */
+  .review__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 3em;
   }
-
-  /* Výchozí barva tlačítka hamburgeru */
-  #hamburger-button {
-    color: var(--white, white);
-  }
-
-  /* Aktivní stav pro pevnou pozici ikony */
-  .page__nav--menu-icon.close-icon.active {
-    position: fixed;
-  }
-}
-@media (min-width: 823px) {
-  .page__nav__list-hamburger {
-    display: none;
-  }
-}
-.page__intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5em;
-  color: var(--white, white);
-  margin-top: 3em;
-}
-.page__intro--h2-1,
-.page__intro--h2-2 {
-  font-size: 50px;
-  font-weight: 700;
-  width: 80%;
-  text-align: center;
-  margin: 0;
-}
-.page__intro--h2-2 {
-  display: none;
-}
-.page__intro-img {
-  opacity: 0;
-  margin-top: 10em;
-  animation: showup 1.5s forwards; /* Použití 'forwards' pro zachování stavu po animaci */
-}
-.page__intro--location {
-  font-size: 20px;
-  width: 70%;
-  text-align: center;
-  margin: 0;
-}
-.page__intro--phone {
-  font-size: 29px;
-  margin: 0;
-}
-.page__intro--highlight {
-  font-weight: 700;
-  color: var(--orange, #fe8c01);
-}
-
-.page__intro--button {
-  border: 3px solid var(--white, white);
-  width: 176px;
-  height: 56px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin-right: 0;
-  position: relative; /* Nutné pro animaci */
-  animation: button-slide-up 1.2s ease-out forwards; /* Animace na začátku */
-}
-.page__intro--button:hover {
-  background-color: var(--white, white);
-  color: var(--orange, #fe8c01);
-  border: 3px solid var(--orange, #fe8c01);
-  transition: background-color 0.5s all;
-}
-/* Animace vyjetí nahoru a návrat */
-@keyframes button-slide-up {
-  0% {
-    transform: translateY(70px); /* Začíná 20px nad svou cílovou pozicí */
-    opacity: 0; /* Začíná neviditelné */
-  }
-  70% {
-    transform: translateY(-20px); /* Mírný přesah */
-    opacity: 1; /* Tlačítko se stává viditelným */
-  }
-  100% {
-    transform: translateY(0); /* Konečná pozice */
-  }
-}
-
-.page__intro-text {
-  color: var(--dark-blue, #12232f);
-  font-weight: 500;
-  text-align: center;
-  font-size: 1.5em;
-  margin-top: 1em;
-}
-
-/*Main*/
-
-.page__section {
-  /* height: 553px; */
-  max-width: 1300px;
-  margin: 50px auto 100px auto;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1em 0;
-}
-.page__section--h2 {
-  color: #12232f;
-  font-size: 3em;
-  margin: 15px 0;
-  font-weight: 700;
-}
-.page__section--h2--highlight {
-  color: var(--orange, #fe8c01);
-  text-decoration: underline;
-}
-.info {
-  --indent: 1em;
-  width: calc((1170px - 4em) / 2);
-  padding: 0 1em;
-  display: flex;
-  flex-direction: column;
-}
-.info1 {
-  align-items: center;
-}
-.page__section--p-1 {
-  color: var(--black, black);
-  font-size: 1.1em;
-  line-height: 1.5em;
-  font-family: "Poppins", sans-serif;
-}
-.page__section--p-2 {
-  color: var(--black, black);
-  font-size: 1.1em;
-  line-height: 1.5em;
-  font-family: "Poppins", sans-serif;
-  display: none;
-}
-.page__section--img--car-1 {
-  margin-top: 20px;
-  order: 0;
-}
-.page__section--img-mechanic {
-  border-radius: 5px;
-  margin-top: 20px;
-}
-.button1 {
-  border: 2px solid;
-  font-size: 1em;
-  font-weight: 700;
-  height: 35px;
-}
-.button1:hover {
-  color: var(--orange, orange);
-  background-color: var(--white, white);
-}
-.page__section--cards {
-  background-color: #d8d7c7;
-  height: auto;
-}
-.page__section--h2--cards {
-  text-align: center;
-  padding: 1em;
-  margin: 0;
-}
-.card__box {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.5em;
-}
-.card {
-  max-width: 360px;
-  padding: 0.5em;
-  background-color: var(--white, white);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 0.5em;
-  box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 8px 24px;
-}
-.card__section__title {
-  color: var(--dark-blue, #12232f);
-  font-size: 1.6em;
-  font-weight: 700;
-  margin: 0.5em 0.25em;
-}
-.card__section__text {
-  margin: 0 0.25em;
-  font-size: 1em;
-  text-align: left;
-  margin-bottom: 1em;
-}
-.card__flex {
-  max-width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.button__card {
-  width: 10em;
-  font-size: 1em;
-  font-weight: 700;
-  margin: 1em;
-}
-.button--more {
-  margin: 0.8em;
-  text-align: center;
-}
-.page__allreview {
-  margin-bottom: 9.5em;
-}
-.review__section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-  margin-top: 3em;
-}
-.review__card {
-  font-family: "Poppins", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  color: var(--black, black);
-  max-width: 480px;
-  flex-direction: column;
-  padding: 1.5em;
-  border-radius: 0.5em;
-  gap: 1em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-}
-.review__footer {
-  display: flex;
-  gap: 1.5em;
-}
-.user__info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25em;
-}
-.user__info p {
-  margin: 0;
-}
-.page__footer {
-  font-family: "Ubuntu", sans-serif;
-  background-color: var(--gray, #d8d7c7);
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.page__footer--title {
-  font-size: 40px;
-  padding: 0.5em 2em;
-  font-weight: 700;
-  margin: 1.5em auto 0 auto;
-  color: var(--white, white);
-  text-align: center;
-}
-.button__footer {
-  width: 10em;
-  font-size: 1em;
-  font-weight: 700;
-  margin: 2em auto;
-}
-.footer__box {
-  background-image: url(../images/basic/Autoservis_Plíšek-footerBox.webp),
-    url(../images/back/Autoservis_Plíšek-footerBox.png),
-    url(../images/back/Autoservis_Plíšek-footerBox.avif);
-  background-repeat: no-repeat;
-  text-align: center;
-  background-size: cover;
-  border-radius: 5px;
-  display: inline-block;
-  margin-left: auto;
-  justify-items: center;
-  margin-right: auto;
-  width: 60%;
-  height: auto;
-  margin-top: -100px;
-}
-.page__footer__contact p,
-.page__footer__contact a {
-  display: block;
-  margin: 0;
-}
-.page__footer__contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.8em;
-  font-size: 1.1em;
-  margin: 0;
-}
-.page__footer__info {
-  display: flex;
-  justify-content: space-between;
-  padding: 2em 0;
-  width: 60%;
-  border-bottom: 1px solid gray;
-  margin-bottom: 1em;
-}
-.page__footer__contact__title {
-  color: var(--dark-blue, #12232f);
-  font-weight: 700;
-}
-.page__footer__contact__a {
-  color: #0f172a;
-  text-decoration: none;
-}
-.page__footer__contact__a:hover {
-  color: var(--orange, #fe8c01);
-  transition: color 0.3s;
-}
-.svg--changeColor {
-  fill: var(--orange, #fe8c01);
-  width: 15px;
-  height: auto;
-}
-.page__footer__copyright p {
-  color: gray;
-  margin: 0 auto 2em auto;
-  font-weight: 600;
-}
-/* Recenze */
-.review__header {
-  background-image: url(../images/basic/Autoservis_Plisek-ReviewHead.webp),
-    url(../images/back/Autoservis_Plisek-ReviewHead.png),
-    url(../images/back/Autoservis_Plisek-ReviewHead.jpg);
-  background-position: center;
-}
-.reviews__h2 {
-  width: 80%;
-}
-.reviews__intro__img {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 15em;
-}
-.review__section2 {
-  max-width: 1400px;
-  margin-top: 0;
-}
-.review__section__smaller {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  justify-content: center;
-}
-.review__card__small {
-  width: 550px;
-}
-.new__review__card {
-  font-family: "Poppins", sans-serif;
-  box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 5px 15px;
-  display: flex;
-  color: var(--black, black);
-  width: 550px;
-  flex-direction: column;
-  padding: 1.5em;
-  border-radius: 0.5em;
-  gap: 1em;
-}
-/* O Nás */
-.about__header {
-  background-image: url(../images/basic/Autoservis_Plíšek-aboutHeader.webp),
-    url(../images/back/Autoservis_Plíšek-aboutHeader.png),
-    url(../images/back/Autoservis_Plíšek-aboutHeader.jpg);
-  background-position: center;
-}
-.page__texts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2em;
-  gap: 3em;
-}
-.page__intro__about-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  gap: 2em;
-  margin-top: 2em;
-}
-.about__card {
-  max-width: 360px;
-  background-color: var(--white, white);
-  color: var(--black, black);
-  text-align: center;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 5px 15px;
-}
-.about__card__img {
-  margin-top: 2em;
-}
-.about__card__title {
-  color: var(--dark-blue, #12232f);
-  font-weight: 700;
-  font-size: 1.7em;
-  margin: 0.25em auto;
-}
-.about__card__text {
-  font-size: 1em;
-  margin: 0 auto 2em auto;
-  padding: 0 1em;
-  line-height: 1.3em;
-}
-.about__main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-.about__main__img {
-  height: auto;
-  width: 100%;
-  display: block;
-  text-align: center;
-  margin-top: 2em;
-  margin-bottom: 8em;
-}
-
-@media (max-width: 1225px) {
-  .new__review__card {
-    max-width: none;
-    width: 80%;
-  }
-  .review__section2 {
-    max-width: 1169px;
-  }
-}
-@media (max-width: 1169px) {
-  .page__section--p-1 {
-    order: 3;
-  }
-  .button1 {
-    margin-top: 20px;
-  }
-  .page__footer--title {
-    font-size: 35px;
-  }
-  .page__footer__info img {
-    width: 300px;
-  }
-}
-@media (max-width: 866px) {
-  .page__footer__info img {
-    display: none;
-  }
-  .page__footer--title {
-    font-size: 30px;
-  }
-  .footer__box {
-    width: 80%;
-  }
-}
-@media (max-width: 771px) {
-  .card {
-    max-width: 570px;
+  .review__card {
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    color: var(--black, black);
+    max-width: 480px;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    gap: 1em;
     margin-left: 1.5em;
     margin-right: 1.5em;
   }
-}
-@media (width<=830px) {
-  .page__nav {
-    max-width: 768px;
-  }
-  .page__nav__list-menu {
-    font-size: 0.8em;
-  }
-  .page__nav__list--logo--img {
-    width: 80px;
-  }
-  .page__nav__list--logo--h1 {
-    font-size: 1.1em;
-  }
-  .page__intro {
-    max-width: 768px;
-  }
-  .page__intro--h2-1 {
-    font-size: 2.5em;
-  }
-  .page__intro-img {
-    width: 600px;
-    height: auto;
-    margin-top: 40px;
-  }
-  .page__intro-text {
-    margin: 1em auto;
-  }
-}
-@media (width<= 768px) {
-  .page__nav__list--logo--h1 {
-    font-size: 0.8em;
-  }
-  .page__intro {
-    max-width: 640px;
-  }
-  .page__intro--h2-1 {
-    font-size: 2em;
-  }
-  .page__intro--location {
-    font-size: 1.2em;
-  }
-  .page__intro--button {
-    margin-top: 10px;
-  }
-  .page__intro-img {
-    width: 500px;
-    height: auto;
-    margin-bottom: -4em;
-  }
-  .review__section2 {
-    margin-top: -100px;
-  }
-}
-.page__nav__list-hamburger.active {
-  right: 0; /* Vyjede na obrazovku */
-}
-@media (max-width: 823px) {
-  .page__nav__list-menu {
-    display: none;
-  }
-  .page__footer--title {
-    padding-top: 1.5em;
-  }
-  .page__nav--menu-icon {
+  .review__footer {
     display: flex;
+    gap: 1.5em;
   }
-  .page__intro--phone {
-    font-size: 1.5em;
+  .user__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
   }
-  .page__intro-img {
-    width: 400px;
-    height: auto;
-    margin-top: 2em;
+  .user__info p {
+    margin: 0;
   }
-  .page__intro-text {
-    margin-top: 1em;
-  }
-  .info {
-    width: 100%;
-    justify-content: center;
-  }
-  .page__section--img--car-1 {
+  .page__footer {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--gray, #d8d7c7);
     width: 100%;
     height: auto;
-  }
-  .page__section--img-mechanic {
-    width: 100%;
-    height: auto;
-  }
-  .page__section--h2 {
-    font-size: 2em;
-  }
-  .page__section--p-1 {
-    display: none;
-  }
-  .page__section--p-2 {
-    display: block;
-    order: 3;
-  }
-  .page__section {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  .img-respomsive {
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
-  .card__section__title {
-    font-size: 1.2em;
-  }
-  .card__section__text {
-    font-size: 0.9em;
-  }
-  .card {
+  .page__footer--title {
+    font-size: 40px;
+    padding: 0.5em 2em;
+    font-weight: 700;
+    margin: 1.5em auto 0 auto;
+    color: var(--white, white);
     text-align: center;
   }
-  .review__card {
-    max-width: 75%;
-  }
-  .page__intro--h2-2 {
-    display: block;
-    font-size: 2.5em;
-  }
-  .page__intro--h2-1 {
-    display: none;
-  }
-  .reviews__h2 {
-    display: block;
-  }
-  .about__title {
-    display: block;
-  }
-  .page__footer--title {
-    font-size: 20px;
-    margin-top: 0;
+  .button__footer {
+    width: 10em;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 2em auto;
   }
   .footer__box {
-    margin-top: 2em;
-  }
-  .button__footer {
-    margin: 1em auto;
-    font-size: 0.9em;
-  }
-  .review__section2 {
-    margin-top: -100px;
-  }
-  .about__main__img {
-    margin-bottom: 2em;
-  }
-  .page__allreview {
-    margin-bottom: 1.5em;
-  }
-}
-@media screen and (min-width: 475px) and (max-width: 823px) {
-  .page__intro-text {
-    margin-top: 3.2em;
-    font-size: 1.2em;
-  }
-}
-@media (max-width: 475px) {
-  .page__intro--h2-2 {
-    font-size: 1.5em;
-  }
-  .page__intro--location {
-    font-size: 1em;
-  }
-  .page__intro--phone {
-    font-size: 1.2em;
-  }
-  .page__intro--button {
-    font-size: 0.8em;
-  }
-  .review__section2 {
-    margin-top: -100px;
-  }
-  .page__intro-img {
-    width: 300px;
+    background-image: url(../images/basic/Autoservis_Plíšek-footerBox.webp),
+      url(../images/back/Autoservis_Plíšek-footerBox.png),
+      url(../images/back/Autoservis_Plíšek-footerBox.avif);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: auto;
+    justify-items: center;
+    margin-right: auto;
+    width: 60%;
     height: auto;
-    margin-top: 10px;
+    margin-top: -100px;
   }
-  .page__intro-text {
-    font-size: 1em;
-    margin-top: 4em;
-  }
-  .page__section--h2 {
-    font-size: 1.5em;
-  }
-  .page__section--p-1 {
-    display: none;
-  }
-  .page__section--p-2 {
+  .page__footer__contact p,
+  .page__footer__contact a {
     display: block;
-    order: 3;
+    margin: 0;
   }
-  .page__section--img--car-1 {
-    width: 100%;
+  .page__footer__contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8em;
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .page__footer__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+    width: 60%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1em;
+  }
+  .page__footer__contact__title {
+    color: var(--dark-blue, #12232f);
+    font-weight: 700;
+  }
+  .page__footer__contact__a {
+    color: #0f172a;
+    text-decoration: none;
+  }
+  .page__footer__contact__a:hover {
+    color: var(--orange, #fe8c01);
+    transition: color 0.3s;
+  }
+  .svg--changeColor {
+    fill: var(--orange, #fe8c01);
+    width: 15px;
     height: auto;
-  }
-  .page__section--img-mechanic {
-    width: 100%;
-    height: auto;
-  }
-  .card__section__title {
-    font-size: 1em;
-  }
-  .card__section__text {
-    font-size: 0.8em;
-  }
-  .card {
-    max-width: none;
   }
   .page__footer__copyright p {
-    font-size: 0.8em;
+    color: gray;
+    margin: 0 auto 2em auto;
+    font-weight: 600;
   }
-}
-.button__customers {
-  margin-top: 1em;
-}
-.logo {
-  cursor: pointer;
+  /* Recenze */
+  .review__header {
+    background-image: url(../images/basic/Autoservis_Plisek-ReviewHead.webp),
+      url(../images/back/Autoservis_Plisek-ReviewHead.png),
+      url(../images/back/Autoservis_Plisek-ReviewHead.jpg);
+    background-position: center;
+  }
+  .reviews__h2 {
+    width: 80%;
+  }
+  .reviews__intro__img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15em;
+  }
+  .review__section2 {
+    max-width: 1400px;
+    margin-top: 0;
+  }
+  .review__section__smaller {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+  }
+  .review__card__small {
+    width: 550px;
+  }
+  .new__review__card {
+    font-family: "Poppins", sans-serif;
+    box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 5px 15px;
+    display: flex;
+    color: var(--black, black);
+    width: 550px;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    gap: 1em;
+  }
+  /* O Nás */
+  .about__header {
+    background-image: url(../images/basic/Autoservis_Plíšek-aboutHeader.webp),
+      url(../images/back/Autoservis_Plíšek-aboutHeader.png),
+      url(../images/back/Autoservis_Plíšek-aboutHeader.jpg);
+    background-position: center;
+  }
+  .page__texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    gap: 3em;
+  }
+  .page__intro__about-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2em;
+    margin-top: 2em;
+  }
+  .about__card {
+    max-width: 360px;
+    background-color: var(--white, white);
+    color: var(--black, black);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--shadow, rgba(149, 157, 165, 0.2)) 0px 5px 15px;
+  }
+  .about__card__img {
+    margin-top: 2em;
+  }
+  .about__card__title {
+    color: var(--dark-blue, #12232f);
+    font-weight: 700;
+    font-size: 1.7em;
+    margin: 0.25em auto;
+  }
+  .about__card__text {
+    font-size: 1em;
+    margin: 0 auto 2em auto;
+    padding: 0 1em;
+    line-height: 1.3em;
+  }
+  .about__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .about__main__img {
+    height: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 8em;
+  }
+
+  @media (max-width: 1225px) {
+    .new__review__card {
+      max-width: none;
+      width: 80%;
+    }
+    .review__section2 {
+      max-width: 1169px;
+    }
+  }
+  @media (max-width: 1169px) {
+    .page__section--p-1 {
+      order: 3;
+    }
+    .button1 {
+      margin-top: 20px;
+    }
+    .page__footer--title {
+      font-size: 35px;
+    }
+    .page__footer__info img {
+      width: 300px;
+    }
+  }
+  @media (max-width: 866px) {
+    .page__footer__info img {
+      display: none;
+    }
+    .page__footer--title {
+      font-size: 30px;
+    }
+    .footer__box {
+      width: 80%;
+    }
+  }
+  @media (max-width: 771px) {
+    .card {
+      max-width: 570px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+  }
+  @media (width<=830px) {
+    .page__nav {
+      max-width: 768px;
+    }
+    .page__nav__list-menu {
+      font-size: 0.8em;
+    }
+    .page__nav__list--logo--img {
+      width: 80px;
+    }
+    .page__nav__list--logo--h1 {
+      font-size: 1.1em;
+    }
+    .page__intro {
+      max-width: 768px;
+    }
+    .page__intro--h2-1 {
+      font-size: 2.5em;
+    }
+    .page__intro-img {
+      width: 600px;
+      height: auto;
+      margin-top: 40px;
+    }
+    .page__intro-text {
+      margin: 1em auto;
+    }
+  }
+  @media (width<= 768px) {
+    .page__nav__list--logo--h1 {
+      font-size: 0.8em;
+    }
+    .page__intro {
+      max-width: 640px;
+    }
+    .page__intro--h2-1 {
+      font-size: 2em;
+    }
+    .page__intro--location {
+      font-size: 1.2em;
+    }
+    .page__intro--button {
+      margin-top: 10px;
+    }
+    .page__intro-img {
+      width: 500px;
+      height: auto;
+      margin-bottom: -4em;
+    }
+    .review__section2 {
+      margin-top: -100px;
+    }
+  }
+  .page__nav__list-hamburger.active {
+    right: 0; /* Vyjede na obrazovku */
+  }
+  @media (max-width: 823px) {
+    .page__nav__list-menu {
+      display: none;
+    }
+    .page__footer--title {
+      padding-top: 1.5em;
+    }
+    .page__nav--menu-icon {
+      display: flex;
+    }
+    .page__intro--phone {
+      font-size: 1.5em;
+    }
+    .page__intro-img {
+      width: 400px;
+      height: auto;
+      margin-top: 2em;
+    }
+    .page__intro-text {
+      margin-top: 1em;
+    }
+    .info {
+      width: 100%;
+      justify-content: center;
+    }
+    .page__section--img--car-1 {
+      width: 100%;
+      height: auto;
+    }
+    .page__section--img-mechanic {
+      width: 100%;
+      height: auto;
+    }
+    .page__section--h2 {
+      font-size: 2em;
+    }
+    .page__section--p-1 {
+      display: none;
+    }
+    .page__section--p-2 {
+      display: block;
+      order: 3;
+    }
+    .page__section {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .img-respomsive {
+      width: 100%;
+      height: auto;
+      align-items: center;
+    }
+    .card__section__title {
+      font-size: 1.2em;
+    }
+    .card__section__text {
+      font-size: 0.9em;
+    }
+    .card {
+      text-align: center;
+    }
+    .review__card {
+      max-width: 75%;
+    }
+    .page__intro--h2-2 {
+      display: block;
+      font-size: 2.5em;
+    }
+    .page__intro--h2-1 {
+      display: none;
+    }
+    .reviews__h2 {
+      display: block;
+    }
+    .about__title {
+      display: block;
+    }
+    .page__footer--title {
+      font-size: 20px;
+      margin-top: 0;
+    }
+    .footer__box {
+      margin-top: 2em;
+    }
+    .button__footer {
+      margin: 1em auto;
+      font-size: 0.9em;
+    }
+    .review__section2 {
+      margin-top: -100px;
+    }
+    .about__main__img {
+      margin-bottom: 2em;
+    }
+    .page__allreview {
+      margin-bottom: 1.5em;
+    }
+  }
+  @media screen and (min-width: 475px) and (max-width: 823px) {
+    .page__intro-text {
+      margin-top: 3.2em;
+      font-size: 1.2em;
+    }
+  }
+  @media (max-width: 475px) {
+    .page__intro--h2-2 {
+      font-size: 1.5em;
+    }
+    .page__intro--location {
+      font-size: 1em;
+    }
+    .page__intro--phone {
+      font-size: 1.2em;
+    }
+    .page__intro--button {
+      font-size: 0.8em;
+    }
+    .review__section2 {
+      margin-top: -100px;
+    }
+    .page__intro-img {
+      width: 300px;
+      height: auto;
+      margin-top: 10px;
+    }
+    .page__intro-text {
+      font-size: 1em;
+      margin-top: 4em;
+    }
+    .page__section--h2 {
+      font-size: 1.5em;
+    }
+    .page__section--p-1 {
+      display: none;
+    }
+    .page__section--p-2 {
+      display: block;
+      order: 3;
+    }
+    .page__section--img--car-1 {
+      width: 100%;
+      height: auto;
+    }
+    .page__section--img-mechanic {
+      width: 100%;
+      height: auto;
+    }
+    .card__section__title {
+      font-size: 1em;
+    }
+    .card__section__text {
+      font-size: 0.8em;
+    }
+    .card {
+      max-width: none;
+    }
+    .page__footer__copyright p {
+      font-size: 0.8em;
+    }
+  }
+  .button__customers {
+    margin-top: 1em;
+  }
+  .logo {
+    cursor: pointer;
+  }
 }
