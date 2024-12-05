@@ -1,0 +1,68 @@
+.card--container{
+    flex-wrap: wrap;
+}
+.page__info{
+    flex-wrap: wrap;
+}
+.info{
+    width: 100%;
+}
+.text-switch{
+    order: 1;
+}
+.section__title{
+    font-size: 2rem;
+}
+.hidden{
+    display: block;
+    font-size: 2.5rem;
+}
+.page__intro__title{
+    display: none;
+}
+.page__header{
+    height: auto;
+}
+.nav__menu{
+    display: none;
+}
+.hamburger-menu{
+    display: flex;
+}
+.nav__menu__hamburger{
+    display:flex;
+}
+.review--container{
+    flex-wrap: wrap;
+}
+.review{
+    width: 100%;
+    flex-grow: 1;
+    min-height: none;
+}
+.card--about{
+    width: 100%;
+}
+.page__footer__stuff{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box__title{
+    font-size: 1.5rem;
+}
+.page__footer__box{
+    padding: 1rem;
+    margin: 0 auto
+}
+.page__reviews{
+    margin-bottom: 0;
+}
+.box__button{
+    font-size: 1rem;
+    padding: 1rem;
+}
+.about__section{
+    margin-bottom: 0;
+    padding: 1rem;
+}

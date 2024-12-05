@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoservis Zídka</title>
+    <link rel="icon" href="images/main/about-card2.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/laptop-1024.css" media="screen and (max-width: 1024px)" />
+    <link rel="stylesheet" href="styles/tablet-768.css" media="screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="styles/640.css" media="screen and (max-width: 640px)" />
+    <link rel="stylesheet" href="styles/475.css" media="screen and (max-width: 475px)" />
+    <script src="script.js" defer></script>
+</head>
+
+<body class="page">
+    <header class="page__header" id="Page - Header">
+        <nav class="page__nav">
+            <div class="nav__logo">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="images/back/nav-logo.webp" type="image/webp">
+                        <img src="images/main/nav-logo.png" height="100px" width="100px" alt="Page-Nav - IMG">
+                    </picture>
+                </a>
+                <h1 class="nav__logo__title">Zdeněk Zídka</h1>
+            </div>
+            <menu class="nav__menu">
+                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
+                <li class="nav__menu__item"><a href="inex.html#Page - Card Section">Služby</a></li>
+                <li class="nav__menu__item"><a href="index.html#Page - Review Section">Recenze</a></li>
+                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+                <li class="nav__menu__item">
+                    <a href="tel:+420 733 508 368" class="button ">Zavolat</a>
+                </li>
+            </menu>
+            <label class="hamburger-menu">
+                <input type="checkbox" id="hamburger-toggle">
+            </label>
+            <menu class="nav__menu__hamburger">
+                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
+                <li class="nav__menu__item">
+                    <a href="index.html#Page - Card Section" onclick="closeHamburgerMenu()">Služby
+
+                    </a>
+                </li>
+                <li class="nav__menu__item">
+                    <a href="index.html#Page - Review Section" onclick="closeHamburgerMenu()">Recenze
+
+                    </a>
+                </li>
+                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+                <li class="nav__menu__item button--hamburger">
+                    <a href="tel:+420 733 508 368" class="button  ">Zavolat</a>
+                </li>
+            </menu>
+        </nav>
+
+        <section class="page__section page__intro" id="Page - Intro Section">
+            <div class="page__intro__text">
+                <h2 class="page__intro__title">Auto Klempiřské A Lakýrnické Práce</h2>
+                <h2 class="hidden">Autoservis Zídka</h2>
+                <p class="page__intro__location">Jarní 253/6, Jablonec nad Nisou</p>
+                <p class="page__intro__phone">Zavolejte na <span class="highlight">733 508 368</span>!</p>
+                <a href="tel:+420 733 508 368" class="button button--intro">Zavolat</a>
+            </div>
+            <picture>
+                <source srcset="images/back/header-car.webp" type="image/webp">
+                <img src="images/main/header-car.png" width="938" class="img-responsive" height="280"
+                    alt="Autoservis Zídka - Intro Picture">
+            </picture>
+        </section>
+
+    </header>
+    <main class="page__content" id="Page - Main">
+        <section class="page__section page__info" id="Page - Info Section">
+            <div class="info">
+                <h2 class="section__title">Něco Málo O Mě<span class="underline">:</span></h2>
+                <p class="section__text text-switch">Umístěn v Jablonci nad Nisou opravuji karoserie aut a provádím
+                    přípravu na lak a lakování osobních a užitkových vozidel. Po dohodě lze využít lakýrnické práce i
+                    pro motocykly, vodní skútry a jiné.</p>
+                <picture>
+                    <source srcset="images/back/info1-car.webp" type="image/webp">
+                    <img src="images/main/info1-car.jpg" width="550" height="366" class="img-responsive"
+                        alt="Autoservis Zídka - Info Picture">
+                </picture>
+            </div>
+            <div class="info">
+                <picture>
+                    <source srcset="images/back/info2-car.webp" type="image/webp">
+                    <img src="images/main/info2-car.jpg" width="550" height="366" class="img-responsive"
+                        alt="Autoservis Zídka - Info Picture">
+                </picture>
+                <a href="tel:+420 733 508 368" class="button">
+                    Zavolat
+                </a>
+            </div>
+        </section>
+        <div class="cards__background">
+            <section class="page__section page__cards" id="Page - Card Section">
+                <h2 class="section__title">Mé Služby<span class="underline">!</span></h2>
+                <div class="card--container">
+                    <article class="card">
+                        <picture>
+                            <source srcset="images/back/card1-car.webp" type="image/webp">
+                            <img src="images/main/card1-car.jpeg" class="img-responsive" width="348" height="232"
+                                alt="Autoservis Zídka - Card Picture">
+                        </picture>
+                        <p class="card__title">Lakování aut</p>
+                        <p class="card__text">Provádím celolaky, opravy zašlých laků, rozstřiky</p>
+                    </article>
+                    <article class="card">
+                        <picture>
+                            <source srcset="images/back/card2-car.webp" type="image/webp">
+                            <img src="images/main/card2-car.jpeg" class="img-responsive" width="348" height="232"
+                                alt="Autoservis Zídka - Card Picture">
+                        </picture>
+                        <p class="card__title">Opravy karoserií</p>
+                        <p class="card__text">Veškeré problémy laku jako jsou např. škrábance či přímo promáčkliny</p>
+                    </article>
+                    <article class="card">
+                        <picture>
+                            <source srcset="images/back/card3-car.webp" type="image/webp">
+                            <img src="images/main/card3-car.jpeg" class="img-responsive" width="348" height="232"
+                                alt="Autoservis Zídka - Card Picture">
+                        </picture>
+                        <p class="card__title">Menší Mechanické Práce</p>
+                        <p class="card__text">Zavolejte na 733 508 368 a domluvíme se jestli vám můžu pomoct!</p>
+                    </article>
+                </div>
+                <a href="tel:+420 733 508 368" class="button">
+                    Zavolat
+                </a>
+            </section>
+        </div>
+        <section class="page__section page__reviews" id="Page - Review Section">
+            <h2 class="section__title">Co Říkají Zákazníci<span class="highlight underline">?</span></h2>
+            <div class="review--container">
+                <article class="review">
+                    <picture>
+                        <source srcset="images/back/stars.webp" type="image/webp">
+                        <img src="images/main/stars.png" width="183" height="29"
+                            alt="Autoservis Zídka - Review Picture">
+                    </picture>
+                    <p class="review__text">
+                        Zdeněk byl fakt super, lakování proběhlo v pořádku a odvedl skvělou práci. Rozhodně doporučuji!
+                    </p>
+                    <div class="user">
+                        <picture>
+                            <source srcset="images/back/user1-img.webp" type="image/webp">
+                            <img src="images/main/user1-img.png" width="60" height="60"
+                                alt="Autoservis Zídka - Profile Picture">
+                        </picture>
+                        <div class="user__info">
+                            <p class="user__name">Dan Veet</p>
+                            <p class="user__date">5.8. 2024</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="review">
+                    <picture>
+                        <source srcset="images/back/stars.webp" type="image/webp">
+                        <img src="images/main/stars.png" width="183" height="29"
+                            alt="Autoservis Zídka - Review Picture">
+                    </picture>
+                    <p class="review__text">
+                        Ok!
+                    </p>
+                    <div class="user">
+                        <picture>
+                            <source srcset="images/back/user2-img.webp" type="image/webp">
+                            <img src="images/main/user2-img.png" width="60" height="60"
+                                alt="Autoservis Zídka - Profile Picture">
+                        </picture>
+                        <div class="user__info">
+                            <p class="user__name">Ladislav Kobr</p>
+                            <p class="user__date">8.4. 2024</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="page__footer" id="Page - Footer">
+        <section class="page__section" id="Page - Footer Section">
+            <div class="page__footer__box">
+                <p class="section__title box__title">Hledáte Autoservis v Jablonci<span class="underline">!</span></p>
+                <a href="tel:+420 733 508 368" class="button box__button">Zavolejte Mi!</a>
+            </div>
+            <div class="page__footer__stuff">
+                <picture>
+                    <source srcset="images/back/nav-logo.webp" type="image/webp">
+                    <img src="images/back/nav-logo.png" class="img-responsive" alt="Autoservis Zídka - Footer Picture">
+                </picture>
+                <div class="page__footer__contact">
+                    <p class="contact__title">Kontaktuj Mě</p>
+                    <a href="tel:+420 733 508 368">
+                        <p class="contact__text">
+                            <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" class="svg--changeColor" viewBox="0 0 122.88 122.27"
+                                style="enable-background:new 0 0 122.88 122.27" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M33.84,50.25c4.13,7.45,8.89,14.6,15.07,21.12c6.2,6.56,13.91,12.53,23.89,17.63c0.74,0.36,1.44,0.36,2.07,0.11 c0.95-0.36,1.92-1.15,2.87-2.1c0.74-0.74,1.66-1.92,2.62-3.21c3.84-5.05,8.59-11.32,15.3-8.18c0.15,0.07,0.26,0.15,0.41,0.21 l22.38,12.87c0.07,0.04,0.15,0.11,0.21,0.15c2.95,2.03,4.17,5.16,4.2,8.71c0,3.61-1.33,7.67-3.28,11.1 c-2.58,4.53-6.38,7.53-10.76,9.51c-4.17,1.92-8.81,2.95-13.27,3.61c-7,1.03-13.56,0.37-20.27-1.69 c-6.56-2.03-13.17-5.38-20.39-9.84l-0.53-0.34c-3.31-2.07-6.89-4.28-10.4-6.89C31.12,93.32,18.03,79.31,9.5,63.89 C2.35,50.95-1.55,36.98,0.58,23.67c1.18-7.3,4.31-13.94,9.77-18.32c4.76-3.84,11.17-5.94,19.47-5.2c0.95,0.07,1.8,0.62,2.25,1.44 l14.35,24.26c2.1,2.72,2.36,5.42,1.21,8.12c-0.95,2.21-2.87,4.25-5.49,6.15c-0.77,0.66-1.69,1.33-2.66,2.03 c-3.21,2.33-6.86,5.02-5.61,8.18L33.84,50.25L33.84,50.25L33.84,50.25z" />
+                                </g>
+                            </svg>+420 733 508 368
+                        </p>
+                    </a>
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/Jarn%C3%AD+253%2F6,+466+01+Jablonec+nad+Nisou+1/@50.7207109,15.1778562,17z/data=!3m1!4b1!4m6!3m5!1s0x470ecac4a5b0ac67:0x8b6fa026edb472b!8m2!3d50.7207075!4d15.1804311!16s%2Fg%2F11c4hn4vlp?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D">
+                        <p class="contact__text contact__location">
+                            <?xml version="1.0"  encoding="utf-8"?><svg version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" class="svg--changeColor" viewBox="0 0 92.25 122.88"
+                                style="enable-background:new 0 0 92.25 122.88" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    }
+                                </style>
+                                <g>
+                                    <path class="st0"
+                                        d="M68.51,106.28c-5.59,6.13-12.1,11.62-19.41,16.06c-0.9,0.66-2.12,0.74-3.12,0.1 c-10.8-6.87-19.87-15.12-27-24.09C9.14,86.01,2.95,72.33,0.83,59.15c-2.16-13.36-0.14-26.22,6.51-36.67 c2.62-4.13,5.97-7.89,10.05-11.14C26.77,3.87,37.48-0.08,48.16,0c10.28,0.08,20.43,3.91,29.2,11.92c3.08,2.8,5.67,6.01,7.79,9.49 c7.15,11.78,8.69,26.8,5.55,42.02c-3.1,15.04-10.8,30.32-22.19,42.82V106.28L68.51,106.28z M46.12,23.76 c12.68,0,22.95,10.28,22.95,22.95c0,12.68-10.28,22.95-22.95,22.95c-12.68,0-22.95-10.27-22.95-22.95 C23.16,34.03,33.44,23.76,46.12,23.76L46.12,23.76z" />
+                                </g>
+                            </svg>Jarní 253/6, Jablonec nad Nisou
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">Copyright © 2024</p>
+        </section>
+    </footer>
+</body>
+
+</html>
