@@ -343,6 +343,7 @@ layer(init);
   .page__intro--highlight {
     font-weight: 700;
     color: var(--orange, #fe8c01);
+    -webkit-color: var(--orange, #fe8c01);
   }
 
   .page__intro--button {
