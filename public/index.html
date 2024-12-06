@@ -16,9 +16,9 @@
 
 <body class="page">
     <header class="page__header" id="Page - Header">
-        <nav class="page__nav">
+        <nav class="page__nav" aria-label="Hlavní navigace">
             <div class="nav__logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Domů">
                     <picture>
                         <source srcset="images/back/nav-logo.webp" type="image/webp">
                         <img src="images/main/nav-logo.png" height="100px" width="100px" alt="Page-Nav - IMG">
@@ -26,33 +26,29 @@
                 </a>
                 <h1 class="nav__logo__title">Zdeněk Zídka</h1>
             </div>
-            <menu class="nav__menu">
-                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
-                <li class="nav__menu__item"><a href="inex.html#Page - Card Section">Služby</a></li>
-                <li class="nav__menu__item"><a href="index.html#Page - Review Section">Recenze</a></li>
-                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+            <menu class="nav__menu" aria-label="Hlavní menu">
+                <li class="nav__menu__item"><a href="index.html" aria-label="Domů">Domů</a></li>
+                <li class="nav__menu__item"><a href="index.html#sluzby" aria-label="Služby">Služby</a></li>
+                <li class="nav__menu__item"><a href="index.html#recenze" aria-label="Recenze">Recenze</a></li>
+                <li class="nav__menu__item"><a href="about.html" aria-label="O Mě">O Mě</a></li>
                 <li class="nav__menu__item">
-                    <a href="tel:+420 733 508 368" class="button ">Zavolat</a>
+                    <a href="tel:+420 733 508 368" class="button" aria-label="Zavolat">Zavolat</a>
                 </li>
             </menu>
-            <label class="hamburger-menu">
+            <label class="hamburger-menu" aria-label="menu">
                 <input type="checkbox" id="hamburger-toggle">
             </label>
-            <menu class="nav__menu__hamburger">
-                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
+            <menu class="nav__menu__hamburger" aria-label="menu">
+                <li class="nav__menu__item"><a href="index.html" aria-label="Domů">Domů</a></li>
                 <li class="nav__menu__item">
-                    <a href="index.html#Page - Card Section" onclick="closeHamburgerMenu()">Služby
-
-                    </a>
+                    <a href="index.html#sluzby" onclick="closeHamburgerMenu()" aria-label="Služby">Služby</a>
                 </li>
                 <li class="nav__menu__item">
-                    <a href="index.html#Page - Review Section" onclick="closeHamburgerMenu()">Recenze
-
-                    </a>
+                    <a href="index.html#recenze" onclick="closeHamburgerMenu()" aria-label="Recenze">Recenze</a>
                 </li>
-                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+                <li class="nav__menu__item"><a href="about.html" aria-label="O Mě">O Mě</a></li>
                 <li class="nav__menu__item button--hamburger">
-                    <a href="tel:+420 733 508 368" class="button  ">Zavolat</a>
+                    <a href="tel:+420 733 508 368" class="button" aria-label="Zavolat">Zavolat</a>
                 </li>
             </menu>
         </nav>
@@ -98,7 +94,7 @@
             </div>
         </section>
         <div class="cards__background">
-            <section class="page__section page__cards" id="Page - Card Section">
+            <section class="page__section page__cards" id="sluzby">
                 <h2 class="section__title">Mé Služby<span class="underline">!</span></h2>
                 <div class="card--container">
                     <article class="card">
@@ -134,7 +130,7 @@
                 </a>
             </section>
         </div>
-        <section class="page__section page__reviews" id="Page - Review Section">
+        <section class="page__section page__reviews" id="recenze">
             <h2 class="section__title">Co Říkají Zákazníci<span class="highlight underline">?</span></h2>
             <div class="review--container">
                 <article class="review">
@@ -197,7 +193,7 @@
                     <p class="contact__title">Kontaktuj Mě</p>
                     <a href="tel:+420 733 508 368">
                         <p class="contact__text">
-                            <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1"
+                            <?xml version="1.0" encoding="utf-8"?><svg version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" class="svg--changeColor" viewBox="0 0 122.88 122.27"
                                 style="enable-background:new 0 0 122.88 122.27" xml:space="preserve">

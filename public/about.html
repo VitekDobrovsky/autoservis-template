@@ -16,9 +16,9 @@
 
 <body class="page">
     <header class="page__header about__header" id="Page - Header">
-        <nav class="page__nav">
+        <nav class="page__nav" aria-label="Hlavní navigace">
             <div class="nav__logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Domů">
                     <picture>
                         <source srcset="images/back/nav-logo.webp" type="image/webp">
                         <img src="images/main/nav-logo.png" height="100px" width="100px" alt="Page-Nav - IMG">
@@ -26,25 +26,25 @@
                 </a>
                 <h1 class="nav__logo__title">Zdeněk Zídka</h1>
             </div>
-            <menu class="nav__menu">
-                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
-                <li class="nav__menu__item"><a href="index.html#Page - Card Section">Služby</a></li>
-                <li class="nav__menu__item"><a href="index.html#Page - Review Section">Recenze</a></li>
-                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+            <menu class="nav__menu" aria-label="Hlavní menu">
+                <li class="nav__menu__item"><a href="index.html" aria-label="Domů">Domů</a></li>
+                <li class="nav__menu__item"><a href="index.html#sluzby" aria-label="Služby">Služby</a></li>
+                <li class="nav__menu__item"><a href="index.html#recenze" aria-label="Recenze">Recenze</a></li>
+                <li class="nav__menu__item"><a href="about.html" aria-label="O Mě">O Mě</a></li>
                 <li class="nav__menu__item">
-                    <a href="tel:+420 733 508 368" class="button ">Zavolat</a>
+                    <a href="tel:+420 733 508 368" class="button" aria-label="Zavolat">Zavolat</a>
                 </li>
             </menu>
-            <label class="hamburger-menu">
+            <label class="hamburger-menu" aria-label="Hamburger menu">
                 <input type="checkbox">
             </label>
-            <menu class="nav__menu__hamburger">
-                <li class="nav__menu__item"><a href="index.html">Domů</a></li>
-                <li class="nav__menu__item"><a href="index.html#Page - Card Section">Služby</a></li>
-                <li class="nav__menu__item"><a href="index.html#Page - Review Section">Recenze</a></li>
-                <li class="nav__menu__item"><a href="about.html">O Mě</a></li>
+            <menu class="nav__menu__hamburger" aria-label="menu">
+                <li class="nav__menu__item"><a href="index.html" aria-label="Domů">Domů</a></li>
+                <li class="nav__menu__item"><a href="index.html#sluzby" aria-label="Služby">Služby</a></li>
+                <li class="nav__menu__item"><a href="index.html#recenze" aria-label="Recenze">Recenze</a></li>
+                <li class="nav__menu__item"><a href="about.html" aria-label="O Mě">O Mě</a></li>
                 <li class="nav__menu__item button--hamburger">
-                    <a href="tel:+420 733 508 368" class="button ">Zavolat</a>
+                    <a href="tel:+420 733 508 368" class="button" aria-label="Zavolat">Zavolat</a>
                 </li>
             </menu>
         </nav>
@@ -93,14 +93,10 @@
     </header>
     <main class="page__content">
         <section class="page__section about__section">
-            <a target="_blank"
-                href="https://www.google.com/maps/place/Jarn%C3%AD+253%2F6,+466+01+Jablonec+nad+Nisou+1/@50.7207109,15.1778562,17z/data=!3m1!4b1!4m6!3m5!1s0x470ecac4a5b0ac67:0x8b6fa026edb472b!8m2!3d50.7207075!4d15.1804311!16s%2Fg%2F11c4hn4vlp?entry=ttu&g_ep=EgoyMDI0MTIwMy4wIKXMDSoASAFQAw%3D%3D">
-                <picture>
-                    <source srcset="images/back/map.webp" type="image/webp">
-                    <img src="images/main/map.jpg" class="img-responsive map-img" width="600" height="400"
-                        alt="Autoservis Zídka - Map Picture">
-                </picture>
-            </a>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.9585850120498!2d15.180431100000003!3d50.720707499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ecac4a5b0ac67%3A0x8b6fa026edb472b!2sJarn%C3%AD%20253%2F6%2C%20466%2001%20Jablonec%20nad%20Nisou%201!5e0!3m2!1sen!2scz!4v1733475599014!5m2!1sen!2scz"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <footer class="page__footer" id="Page - Footer">
